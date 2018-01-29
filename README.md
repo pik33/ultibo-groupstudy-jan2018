@@ -20,5 +20,5 @@ Assignments
 |Forum Handle|GitHub Account|Time Zone|Host Platform|
 |------------|--------------|---------|-------------|
 |markfirmware|markfirmware  |-5       |Windows      |
-|pjde        |pjde          |+10      |             |
 |pik33       |pik33         |+1       |Raspbian     |
+|pjde        |pjde-ultibo   |+10      |Windows      |
