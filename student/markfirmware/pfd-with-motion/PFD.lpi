@@ -34,7 +34,7 @@
     </RunParams>
     <Units Count="2">
       <Unit0>
-        <Filename Value="PFD.pas"/>
+        <Filename Value="PFD.lpr"/>
         <IsPartOfProject Value="True"/>
       </Unit0>
       <Unit1>
@@ -55,8 +55,8 @@
     </SearchPaths>
     <CodeGeneration>
       <SmartLinkUnit Value="True"/>
-      <TargetProcessor Value="ARMV6"/>
-      <TargetController Value="RPIZERO"/>
+      <TargetProcessor Value="ARMV7A"/>
+      <TargetController Value="RPI2B"/>
       <TargetCPU Value="arm"/>
       <TargetOS Value="ultibo"/>
       <Optimizations>
