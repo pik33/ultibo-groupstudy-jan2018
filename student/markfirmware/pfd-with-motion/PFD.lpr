@@ -7,15 +7,27 @@ program PFD;
 
 uses
   RaspberryPi2, {Include RaspberryPi2 to make sure all standard functions are included}
+  BCM2836,BCM2709,
   GlobalConst,
   GlobalTypes,
   Threads,
   Console,
+  Platform,
+  Ultibo,
   SysUtils,
+  FATFS,FileSystem,MMC,
   OpenVG,       {Include the OpenVG unit so we can use the various types and structures}
   VGShapes,     {Include the VGShapes unit to give us access to all the functions}
   VC4,
   artihorizon;          {Include the VC4 unit to enable access to the GPU}
+
+procedure RestoreDefaultBootConfig;
+begin
+ while not DirectoryExists ('C:\') Do
+  sleep (500);
+ if FileExists('default-config.txt') then
+  CopyFile('default-config.txt','config.txt',False);
+end;
 
 var
  Width:Integer;  {A few variables used by our shapes example}
@@ -87,6 +99,7 @@ begin
 end;
 
 begin
+ RestoreDefaultBootConfig;
  PfdMain;
 end.
 
