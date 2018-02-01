@@ -9,5 +9,6 @@ then
     ./lazbuild.exe $(dirs -l +1)/$LPI
     popd
 else
+    export PATH=$HOME/ultibo/core:$PATH
     lazbuild $LPI
 fi
